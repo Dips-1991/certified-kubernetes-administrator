@@ -5,7 +5,7 @@ This readme file provides instructions on manually scheduling Kubernetes pods us
 
 YouTube Video: [Manual Scheduling in Kubernetes](https://youtu.be/ARHfMpiBv-4)
 
-### Question 1: Create a pod named mypod and manually schedule it onto the master node. 
+### Question 1: Create a pod named mypod and manually schedule it onto the controlplane node. 
 - Create a file named mypod.yaml.
 ```
 apiVersion: v1
@@ -15,7 +15,7 @@ metadata:
   labels:
     color: blue
 spec:
-  nodeName: master
+  nodeName: controlplane
   containers:
   - name: mycontainer
     image: nginx
